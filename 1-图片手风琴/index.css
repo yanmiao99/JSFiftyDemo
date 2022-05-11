@@ -9,7 +9,6 @@ html, body {
 
 ul {
     list-style-type: none;
-    width: 80%;
     height: 600px;
     position: absolute;
     top: 50%;
@@ -18,15 +17,18 @@ ul {
     display: flex;
 }
 
+/*
+* 参考资料 https://10.1pxeye.com/prevent-flickering-of-css-transitions-and-transforms-in-webkit/
+*/
+
 li {
-    flex-shrink: 0; /* 不压缩空间 */
-    width: 50px;
+    flex-shrink: 0;  /* 不压缩空间 */
+    width: 80px;
     height: 100%;
     margin-right: 50px;
-    border-radius: 30px;
-    border: 1px solid #ccc;
+    border-radius: 50px;
     overflow: hidden;
-    transition: width 1s ease-out;
+    transition: width 0.6s ease-out;
     background-size: cover;
     backface-visibility: hidden; /* 解决chrome动画抖动问题 */
 }

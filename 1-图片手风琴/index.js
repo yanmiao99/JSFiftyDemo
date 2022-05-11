@@ -1,6 +1,9 @@
 let lis = document.querySelectorAll('li')
 
-let curLi = null
+lis[0].className = 'active'
+
+let curLi = lis[0]
+
 
 lis.forEach((li) => {
     li.addEventListener('click', () => {
@@ -13,15 +16,13 @@ lis.forEach((li) => {
         // li.style.width = '500px'
         // curLi = li
 
+        /*
+        * 参考资料 : https://polydactyl-poppyseed-556.notion.site/69ab8c4afccd48f3b2b65a76738d7d58
+        * */
+
         // 正确做法应该是添加类名 , 就算是多个元素, 也只进行一次重排
         if (curLi !== null) {
             curLi.classList.remove('active')
-        }
-
-        if (li === curLi) {
-            curLi.classList.remove('active')
-            curLi = null
-            return
         }
 
         li.classList.add('active')
