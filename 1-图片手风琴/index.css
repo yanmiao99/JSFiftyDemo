@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: #f5f5f5;
+}
+
+ul {
+    list-style-type: none;
+    width: 80%;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+li {
+    flex-shrink: 0; /* 不压缩空间 */
+    width: 50px;
+    height: 100%;
+    margin-right: 50px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+    transition: width 1s ease-out;
+    background-size: cover;
+    backface-visibility: hidden; /* 解决chrome动画抖动问题 */
+}
+
+.active {
+    width: 800px !important;
+}
+
+li:nth-child(1) {
+    background-image: url("images/1.png");
+}
+
+li:nth-child(2) {
+    background-image: url("images/2.png");
+}
+
+li:nth-child(3) {
+    background-image: url("images/3.png");
+}
+
+li:nth-child(4) {
+    background-image: url("images/4.png");
+}
+
+li:nth-child(5) {
+    background-image: url("images/5.png");
+}
