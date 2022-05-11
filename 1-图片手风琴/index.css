@@ -9,6 +9,7 @@ html, body {
 
 ul {
     list-style-type: none;
+    width: 95%;
     height: 600px;
     position: absolute;
     top: 50%;
@@ -22,18 +23,21 @@ ul {
 */
 
 li {
-    flex-shrink: 0;  /* 不压缩空间 */
+    flex-shrink: 0; /* 不压缩空间 */
     width: 80px;
+    /*flex: 1;*/ /* flex 布局也同样可以实现效果 */
     height: 100%;
     margin-right: 50px;
     border-radius: 50px;
     overflow: hidden;
-    transition: width 0.6s ease-out;
+    transition: width 0.6s ease-in;
+    /*transition: flex 0.6s ease-in;*/
     background-size: cover;
     backface-visibility: hidden; /* 解决chrome动画抖动问题 */
 }
 
 .active {
+    /*flex: 5;*/
     width: 800px !important;
 }
 
