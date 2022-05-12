@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: #f5f5f5;
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #E0E0E0;
+    background: #fff;
+    position: relative;
+    margin-right: 50px;
+    text-align: center;
+    line-height: 30px;
+    transition: border-color 0.3s linear;
+}
+
+/* 让第一个元素的横线不进行展示 */
+li:nth-child(1):after {
+    display: none;
+}
+
+li:after, li:before {
+    position: absolute;
+    display: block;
+    content: '';
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* 设置元素的横线底色 */
+li:after {
+    width: 50px;
+    right: 32px;
+    background: #E0E0E0;
+}
+
+/* 设置元素的横线进度条的颜色 */
+li:before {
+    z-index: 2;
+    width: 0; /* 动画效果必须有对应的值 */
+    left: -52px;
+    transition: width 0.3s ease-out;
+    background: #5296D5; /* 动画效果必须有对应的值 */
+}
+
+/* 给第一个元素默认就是 active 的效果 */
+li:nth-child(1) {
+    border-color: #5296D5;
+}
+
+li.active {
+    border-color: #5296D5;
+}
+
+li.active:before {
+    width: 50px;
+    background: #5296D5;
+}
+
+button {
+    margin-top: 50px;
+    padding: 5px 20px;
+    color: #fff;
+    background: #5396D6;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+
+button.disabled {
+    background-color: #DFE1E0;
+    cursor: not-allowed; /* 加上属性后会变成禁用的小手指 */
+}
+
