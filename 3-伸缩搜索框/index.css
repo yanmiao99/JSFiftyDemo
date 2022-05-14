@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: #735DE8;
+}
+
+div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+label {
+    display: flex;
+    height: 50px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+input {
+    width: 200px;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    padding: 0 10px;
+    background: transparent;
+    transition: width 0.3s ease, padding 0.3s ease; /* 多个属性连写 */
+}
+
+span {
+    display: block;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    height: 100%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+label.active input {
+    width: 0;
+    padding: 0;
+}
+
+.p-value{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+

@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background: url("./images/1.png") no-repeat;
+    background-size: cover;
+    filter: blur(10px);
+}
+
+.num-loading {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.num-loading span {
+    font-size: 36px;
+    color: #fff;
+}

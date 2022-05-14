@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            position: fixed;
+            top: 50%;
+            right: 20%;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <p class="h1">h1</p>
+    <p class="h2">h2</p>
+</div>
+
+
+<h1 id="h1">标题1</h1>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<p>文字1</p>
+<h1 id="h2">标题2</h1>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+<p>文字2</p>
+
+</body>
+<script>
+
+    // 这个点击事件, 在 vue 中, 不要写多个, 直接写一个 , 然后用字典的方式判断点击了那个
+
+    let h1 = document.querySelector('.h1')
+    h1.addEventListener('click', () => {
+        // goAnchorPoint('h1')
+        smoothScroll('#h1')
+    })
+
+    let h2 = document.querySelector('.h2')
+    h2.addEventListener('click', () => {
+        // goAnchorPoint('h2')
+        smoothScroll('#h2')
+    })
+
+
+    // 主要核心函数 , 传需要跳转到的 id 即可
+    const goAnchorPoint = (elemId) => {
+        let anchorHeight = document.getElementById(elemId).offsetTop - 80 // 顶部的 距离是 80 , 可不写
+        if (document.documentElement.scrollTop) {
+            document.documentElement.scrollTop = anchorHeight
+        } else if (document.body.scrollTop) {
+            document.body.scrollTop = anchorHeight
+        } else {
+            //这个else指以上两种值均为0的状态，有一者是恒为0的，另一者可能因为回到顶部等操作被置为0，便会出现这种状况
+            document.documentElement.scrollTop = anchorHeight
+            document.body.scrollTop = anchorHeight
+        }
+    }
+
+
+    const smoothScroll = (element) => {
+        document.querySelector(element).scrollIntoView({
+            behavior: 'smooth' // 取值用平滑滚动
+        });
+    }
+
+
+</script>
+</html>
