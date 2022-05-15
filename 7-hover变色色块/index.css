@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    background: #282A36;
+}
+
+.box-list {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 200px auto;
+    /*box-sizing: border-box;*/
+}
+
+.box-item {
+    width: 20px;
+    height: 20px;
+    background: #1B1B1B;
+    margin: 2px;
+    border-radius: 4px;
+
+    transition: 2s ease;
+}
+
+.box-item:hover {
+    transition-duration: 0s; /* hover 的时候, 没有动画延迟 , 而离开的时候才会有 2s 的延迟 */
+}
+
